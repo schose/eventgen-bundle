@@ -1,0 +1,81 @@
+version: '3'
+services:
+   eventgen1:
+       image: schose/eventgen:6.3.2
+       volumes:
+         - /docker/eventgen/configs:/configs
+         - /docker/eventgen/samples:/opt/splunk/etc/apps/samples/
+         - /logfiles/eventgen1:/logfiles
+       entrypoint: python -m splunk_eventgen -v generate /configs/bluecoat/eventgen.conf
+       container_name: eventgen1
+       hostname: eventgen1
+
+   eventgen2:
+       image: schose/eventgen:6.3.2
+       volumes:
+         - /docker/eventgen/configs:/configs
+         - /docker/eventgen/samples:/opt/splunk/etc/apps/samples/
+         - /logfiles/eventgen2:/logfiles
+       entrypoint: python -m splunk_eventgen -v generate /configs/bluecoat/eventgen.conf
+       container_name: eventgen2
+       hostname: eventgen2
+
+   eventgen3:
+       image: schose/eventgen:6.3.2
+       volumes:
+         - /docker/eventgen/configs:/configs
+         - /docker/eventgen/samples:/opt/splunk/etc/apps/samples/
+         - /logfiles/eventgen3:/logfiles
+       entrypoint: python -m splunk_eventgen -v generate /configs/bluecoat/eventgen.conf
+       container_name: eventgen3
+       hostname: eventgen3
+
+   eventgen4:
+       image: schose/eventgen:6.3.2
+       volumes:
+         - /docker/eventgen/configs:/configs
+         - /docker/eventgen/samples:/opt/splunk/etc/apps/samples/
+         - /logfiles/eventgen4:/logfiles
+       entrypoint: python -m splunk_eventgen -v generate /configs/bluecoat/eventgen.conf
+       container_name: eventgen4
+       hostname: eventgen4
+
+   eventgen5:
+       image: schose/eventgen:6.3.2
+       volumes:
+         - /docker/eventgen/configs:/configs
+         - /docker/eventgen/samples:/opt/splunk/etc/apps/samples/
+         - /logfiles/eventgen5:/logfiles
+       entrypoint: python -m splunk_eventgen -v generate /configs/bluecoat/eventgen.conf
+       container_name: eventgen5
+       hostname: eventgen5
+
+   eventgen6:
+       image: schose/eventgen:6.3.2
+       volumes:
+         - /docker/eventgen/configs:/configs
+         - /docker/eventgen/samples:/opt/splunk/etc/apps/samples/
+         - /logfiles/eventgen6:/logfiles
+       entrypoint: python -m splunk_eventgen -v generate /configs/bluecoat/eventgen.conf
+       container_name: eventgen6
+       hostname: eventgen6
+
+   eventgen7:
+       image: schose/eventgen:6.3.2
+       volumes:
+         - /docker/eventgen/configs:/configs
+         - /docker/eventgen/samples:/opt/splunk/etc/apps/samples/
+         - /logfiles/eventgen7:/logfiles
+       entrypoint: python -m splunk_eventgen -v generate /configs/bluecoat/eventgen.conf
+       container_name: eventgen7
+       hostname: eventgen7
+
+   eventgen8:
+       image: schose/eventgen:6.3.2
+       volumes:
+         - /docker/eventgen/configs:/configs
+         - /docker/eventgen/samples:/opt/splunk/etc/apps/samples/
+         - /logfiles/eventgen8:/logfiles
+       entrypoint: python -m splunk_eventgen -v generate /configs/bluecoat/eventgen.conf
+       container_name: eventgen8
+       hostname: eventgen8
